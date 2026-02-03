@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ Magical Birthday Wonderland ✨</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="magic-bg">
+        <div class="bubbles"></div>
+        <div class="stars"></div>
+        <div class="aurora"></div>
+    </div>
+    
+    <!-- Floating Elements -->
+    <div class="floating-balloons"></div>
+    <div class="floating-gifts"></div>
+    
+    <!-- Main Container -->
+    <div class="magic-container">
+        <!-- Header -->
+        <header class="magic-header">
+            <div class="header-sparkle left"></div>
+            <div class="header-sparkle right"></div>
+            
+            <h1 class="magic-title animate__animated animate__pulse animate__infinite">
+                <span class="title-word word1">HAPPY</span>
+                <span class="title-word word2">BIRTHDAY</span>
+                <span class="title-word word3">✨</span>
+            </h1>
+            
+            <div class="header-subtitle">
+                <p class="subtitle-text">A Magical Celebration Just For You</p>
+                <div class="subtitle-sparkle"></div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="magic-content">
+            <!-- Interactive Cake -->
+            <div class="wonder-cake">
+                <div class="cake-base"></div>
+                <div class="cake-layer layer-1"></div>
+                <div class="cake-layer layer-2"></div>
+                <div class="cake-layer layer-3"></div>
+                <div class="cake-icing"></div>
+                <div class="cake-topper">🎂</div>
+                
+                <!-- Candles -->
+                <div class="candles-container">
+                    <div class="candle" data-id="1">
+                        <div class="candle-body"></div>
+                        <div class="candle-flame"></div>
+                    </div>
+                    <div class="candle" data-id="2">
+                        <div class="candle-body"></div>
+                        <div class="candle-flame"></div>
+                    </div>
+                    <div class="candle" data-id="3">
+                        <div class="candle-body"></div>
+                        <div class="candle-flame"></div>
+                    </div>
+                    <div class="candle" data-id="4">
+                        <div class="candle-body"></div>
+                        <div class="candle-flame"></div>
+                    </div>
+                    <div class="candle" data-id="5">
+                        <div class="candle-body"></div>
+                        <div class="candle-flame"></div>
+                    </div>
+                </div>
+                
+                <div class="cake-sparkles">
+                    <div class="sparkle s1"></div>
+                    <div class="sparkle s2"></div>
+                    <div class="sparkle s3"></div>
+                </div>
+            </div>
+
+            <!-- Birthday Message -->
+            <div class="message-box animate__animated animate__fadeInUp">
+                <div class="message-header">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h3>Your Special Message</h3>
+                </div>
+                
+                <div class="message-content" id="birthdayMessage">
+                    <p>Today marks the beginning of another incredible journey around the sun. May your birthday be as wonderful, magical, and extraordinary as you are!</p>
+                </div>
+                
+                <div class="message-signature">
+                    <span class="signature-heart">💝</span>
+                    <span class="signature-text">With Love</span>
+                </div>
+            </div>
+
+            <!-- Personalization -->
+            <div class="personalize-section">
+                <div class="personalize-card">
+                    <div class="card-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    
+                    <div class="card-content">
+                        <h4>Make It Personal</h4>
+                        <p>Enter your name for a magical personalized experience</p>
+                        
+                        <div class="input-magic">
+                            <input type="text" id="userName" placeholder="Enter your beautiful name...">
+                            <button class="magic-button" onclick="personalizeWish()">
+                                <span class="button-text">✨ Create Magic</span>
+                                <span class="button-sparkle"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interactive Features -->
+            <div class="interactive-features">
+                <div class="feature-card">
+                    <div class="feature-icon">🎉</div>
+                    <h4>Celebration Time</h4>
+                    <p>Launch a birthday celebration</p>
+                    <button class="feature-btn" onclick="launchCelebration()">
+                        <i class="fas fa-fireworks"></i> Start Party
+                    </button>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🎵</div>
+                    <h4>Birthday Music</h4>
+                    <p>Play magical birthday tunes</p>
+                    <button class="feature-btn music-btn" id="musicBtn" onclick="toggleMusic()">
+                        <i class="fas fa-play"></i> Play Music
+                    </button>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">💫</div>
+                    <h4>Make a Wish</h4>
+                    <p>Blow the candles & make a wish</p>
+                    <button class="feature-btn" onclick="blowAllCandles()">
+                        <i class="fas fa-birthday-cake"></i> Make Wish
+                    </button>
+                </div>
+            </div>
+
+            <!-- Surprise Box -->
+            <div class="surprise-section">
+                <div class="surprise-box">
+                    <div class="box-lid"></div>
+                    <div class="box-body">
+                        <div class="box-content" id="surpriseContent">
+                            <p>Click for a birthday surprise! 🎁</p>
+                        </div>
+                    </div>
+                    <button class="surprise-button" onclick="openSurprise()">
+                        <i class="fas fa-gift"></i> Open Surprise
+                    </button>
+                </div>
+            </div>
+
+            <!-- Counter -->
+            <div class="counter-section">
+                <div class="counter-card">
+                    <h4>🎂 Celebrating You For</h4>
+                    <div class="counter-display">
+                        <div class="counter-item">
+                            <span class="counter-number" id="days">00</span>
+                            <span class="counter-label">Days</span>
+                        </div>
+                        <div class="counter-item">
+                            <span class="counter-number" id="hours">00</span>
+                            <span class="counter-label">Hours</span>
+                        </div>
+                        <div class="counter-item">
+                            <span class="counter-number" id="minutes">00</span>
+                            <span class="counter-label">Minutes</span>
+                        </div>
+                        <div class="counter-item">
+                            <span class="counter-number" id="seconds">00</span>
+                            <span class="counter-label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="magic-footer">
+            <div class="footer-content">
+                <div class="footer-heart">
+                    <i class="fas fa-heart"></i>
+                </div>
+                
+                <div class="footer-text">
+                    <p>Made with magic for your special day</p>
+                    <p class="footer-counter">This wish has been viewed <span id="viewCount">1</span> times</p>
+                </div>
+                
+                <div class="footer-actions">
+                    <button class="footer-btn" onclick="shareMagic()">
+                        <i class="fas fa-share-alt"></i> Share Magic
+                    </button>
+                    <button class="footer-btn" onclick="resetMagic()">
+                        <i class="fas fa-redo"></i> Experience Again
+                    </button>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Confetti Container -->
+    <div id="confettiContainer"></div>
+    
+    <!-- Audio -->
+    <audio id="birthdayMusic" loop>
+        <source src="https://assets.mixkit.co/music/preview/mixkit-birthday-happy-479.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="celebrationSound">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-happy-crowd-laugh-464.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+                              </html>
